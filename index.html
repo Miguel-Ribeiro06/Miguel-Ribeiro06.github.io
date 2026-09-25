@@ -6,6 +6,108 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Miguel Ribeiro Afonso</h1>
+    <div class="shell">
+        <header>
+            <a class="brand" href="#top" aria-label="Miguel Ribeiro Afonso home"><span class="brand-mark">MR</span><span>Miguel Ribeiro</span></a>
+            <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+            <nav aria-label="Main navigation">
+                <a href="#work">Work</a>
+                <a href="#about">About</a>
+                <a href="#process">Process</a>
+                <a class="nav-cta" href="#contact">Let's talk</a>
+            </nav>
+        </header>
+
+        <main id="top">
+            <section class="hero">
+                <div class="hero-grid">
+                    <div>
+                        <div class="eyebrow mono">Frontend developer / Portugal</div>
+                        <h1>I make the web feel a little more <em>human.</em></h1>
+                    </div>
+                    <div class="hero-note">
+                        I’m Miguel, a developer with a designer’s eye for detail. I turn good ideas into clear, useful digital experiences.
+                        <strong class="mono">Available for selected projects · 2026</strong>
+                    </div>
+                </div>
+                <a class="scroll-cue mono" href="#work"><span>↓</span> Selected work</a>
+            </section>
+
+            <section class="section" id="work">
+                <div class="section-heading">
+                    <h2>Selected<br>work</h2>
+                    <p>A few things I’ve helped bring into the world, from first sketch to final interaction.</p>
+                </div>
+                <div class="project-list">
+                    <article class="project">
+                        <div class="project-visual"><span class="visual-label">atlas/</span></div>
+                        <div class="project-copy">
+                            <div><span class="project-number mono">01 / Product design</span><h3>Atlas spaces</h3><p>A calmer way for remote teams to find their focus and work together.</p></div>
+                            <div class="project-meta"><span class="mono">UX · UI · Development</span><span class="arrow">↗</span></div>
+                        </div>
+                    </article>
+                    <article class="project">
+                        <div class="project-visual"><span class="visual-label">Forma.</span></div>
+                        <div class="project-copy">
+                            <div><span class="project-number mono">02 / Digital experience</span><h3>Forma studio</h3><p>An expressive home for a small architecture practice with big ideas.</p></div>
+                            <div class="project-meta"><span class="mono">Art direction · Web</span><span class="arrow">↗</span></div>
+                        </div>
+                    </article>
+                    <article class="project">
+                        <div class="project-visual"><span class="visual-label">morrow</span></div>
+                        <div class="project-copy">
+                            <div><span class="project-number mono">03 / E-commerce</span><h3>Morrow objects</h3><p>A tactile online shop for objects made slowly, honestly, and to last.</p></div>
+                            <div class="project-meta"><span class="mono">Strategy · Build</span><span class="arrow">↗</span></div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section" id="about">
+                <div class="about">
+                    <div class="about-intro">The best digital work sits at the intersection of <mark>curiosity, clarity,</mark> and a little bit of play.</div>
+                    <div class="about-detail">
+                        <p>I care about the space between a person and a screen: the pause before a click, the confidence of a clear interface, the small detail that makes something feel considered.</p>
+                        <p>My toolkit is mostly HTML, CSS, JavaScript, and whatever else helps an idea become real. I’m currently open to freelance collaborations and thoughtful in-house teams.</p>
+                        <a href="mailto:hello@miguelribeiro.dev">hello@miguelribeiro.dev ↗</a>
+                        <div class="facts"><div class="fact"><span class="mono">Based in</span><strong>Porto, Portugal</strong></div><div class="fact"><span class="mono">Experience</span><strong>3+ years</strong></div></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section process" id="process">
+                <div class="section-heading"><h2>How I<br>work</h2><p>Good work is a conversation. These are the beats I return to.</p></div>
+                <div class="steps">
+                    <div class="step"><span class="step-no mono">01 / Listen</span><h3>Start with the why</h3><p>Before opening Figma or writing code, I get close to the problem and the people it needs to serve.</p></div>
+                    <div class="step"><span class="step-no mono">02 / Shape</span><h3>Find the simple idea</h3><p>We turn the messy first thoughts into a clear direction, a useful system, and a shared definition of done.</p></div>
+                    <div class="step"><span class="step-no mono">03 / Make</span><h3>Build with care</h3><p>Details matter. I prototype early, communicate often, and ship work that holds up beyond the first impression.</p></div>
+                </div>
+            </section>
+
+            <section class="section contact" id="contact">
+                <h2>Have a good idea?<br><em>Let’s make it real.</em></h2>
+                <a class="contact-link" href="mailto:hello@miguelribeiro.dev">Start a conversation <span>↗</span></a>
+            </section>
+        </main>
+
+        <footer>
+            <span class="mono">© 2026 Miguel Ribeiro Afonso</span>
+            <div class="socials mono"><a href="https://github.com/Miguel-Ribeiro06" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a><a href="#top">Back to top ↑</a></div>
+        </footer>
+    </div>
+    <script>
+        const menuButton = document.querySelector('.menu-toggle');
+        const navigation = document.querySelector('nav');
+        menuButton.addEventListener('click', () => {
+            const isOpen = navigation.classList.toggle('open');
+            menuButton.setAttribute('aria-expanded', isOpen);
+            menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+        });
+        navigation.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+            navigation.classList.remove('open');
+            menuButton.setAttribute('aria-expanded', 'false');
+            menuButton.setAttribute('aria-label', 'Open menu');
+        }));
+    </script>
 </body>
 </html>
