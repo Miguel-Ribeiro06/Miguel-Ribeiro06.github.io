@@ -95,6 +95,12 @@
         .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 42px; padding-top: 22px; border-top: 1px solid var(--line); }
         .fact strong { display: block; margin-top: 7px; font-size: 1.05rem; }
 
+        .languages { border-top: 1px solid var(--line); }
+        .language-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+        .language-list li { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 18px 20px; background: var(--cream); border: 1px solid var(--line); }
+        .language-name strong { font-weight: 700; }
+        .language-level { color: var(--muted); font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; }
+
         .process { background: var(--night); color: var(--ink); border-top: 0; }
         .process .section-heading p, .process .mono { color: #b7c0be; }
         .process .section-heading { border-bottom: 1px solid rgba(244,241,235,.2); padding-bottom: 30px; }
@@ -131,6 +137,7 @@
             .project { grid-template-columns: 1fr; }
             .project-visual { min-height: 240px; }
             .project-copy { min-height: 300px; padding: 28px 24px 24px; }
+            .language-list li { flex-direction: column; align-items: flex-start; }
             .steps { grid-template-columns: 1fr; gap: 32px; }
             .step { min-height: auto; }
             .contact { padding-bottom: 72px; }
@@ -202,11 +209,24 @@
                     <div class="about-intro">I’m building a foundation in cloud computing through <mark>curiosity, practice,</mark> and hands-on experiments.</div>
                     <div class="about-detail">
                         <p>I’m interested in what happens behind the interface: reliable infrastructure, secure systems, useful automation, and the decisions that help applications stay available.</p>
-                        <p>This portfolio is a record of my progress as I study cloud platforms and turn theory into small, working projects.</p>
                         <a href="https://github.com/Miguel-Ribeiro06" target="_blank" rel="noreferrer">See my GitHub ↗</a>
                         <div class="facts"><div class="fact"><span class="mono">Based in</span><strong>Luxembourg</strong></div><div class="fact"><span class="mono">Status</span><strong>Cloud student</strong></div></div>
                     </div>
                 </div>
+            </section>
+
+            <section class="section languages" id="languages">
+                <div class="section-heading">
+                    <h2>Languages</h2>
+                    <p>The languages I speak and use in personal, academic, and professional contexts.</p>
+                </div>
+                <ul class="language-list">
+                    <li><div class="language-name"><strong>Portuguese</strong></div><span class="language-level mono">Native</span></li>
+                    <li><div class="language-name"><strong>French</strong></div><span class="language-level mono">Fluent</span></li>
+                    <li><div class="language-name"><strong>Luxembourgish</strong></div><span class="language-level mono">Fluent</span></li>
+                    <li><div class="language-name"><strong>German</strong></div><span class="language-level mono">Fluent</span></li>
+                    <li><div class="language-name"><strong>English</strong></div><span class="language-level mono">Fluent</span></li>
+                </ul>
             </section>
 
             <section class="section process" id="process">
